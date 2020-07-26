@@ -1,0 +1,54 @@
+C# deneme
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace dört_işlem
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sayi1,sayi2;
+            string sec;
+            Console.Write("1. Sayıyı giriniz: ");
+            sayi1 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("2. Sayıyı giriniz: ");
+            sayi2 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Sayıların Toplamı (t)");
+            Console.WriteLine("Sayıların Farkı   (f)");
+            Console.WriteLine("Sayıların Çarpımı (ç)");
+            Console.WriteLine("Sayıların Bölümü  (b)");
+            Console.WriteLine("--------------------------------------");
+            Console.Write("Seçiminizi Yapınız: ");
+            sec = Console.ReadLine();
+ 
+            if (sec == "t") 
+            { 
+                int toplam = sayi1 + sayi2;
+                Console.Write("İki sayının Toplamı: " + toplam);
+            }
+            else if (sec == "f")
+            {
+                int fark = sayi1 - sayi2;
+                Console.Write("İki sayının Farkı: " + fark);
+            }
+            else if (sec == "ç")
+            {
+                int carp = sayi1 * sayi2;
+                Console.Write("İki sayının Çarpımı: " + carp);
+            }
+            else if (sec == "b")
+            {
+                int bol = sayi1 / sayi2;
+                Console.Write("İki sayının Bölümü: " + bol);
+            }
+            else 
+            {
+                Console.Write("Hatalı Giriş !!!! ");
+            }
+            Console.ReadKey();
+        }
+    }
+}
